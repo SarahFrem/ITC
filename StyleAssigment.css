@@ -1,0 +1,60 @@
+body{
+	text-align: center;
+}
+
+.box {
+	padding: 10px;
+	margin: 15px 0px;
+	color: darkblue;
+	font-size: 17px;
+	text-align:center;
+
+
+}
+
+.box:hover {
+	color: #ff4d4d;
+	font-size: 19px;
+
+}
+
+input, select {
+	margin: 15px 0px;
+}
+
+.BackImage {
+	height: 350px;
+	margin-bottom: 15px;
+
+}
+
+.title {
+	font-size: 20px;
+	margin: 20px 0px;
+}
+
+.buttonNext {
+	left: 23%;
+	background-color: black;
+	color: white;
+	border:none;
+	font-size: 17px;
+	margin-top: 15px;
+}
+
+.buttonNext:hover {
+	background-color: white;
+	color: grey;
+	font-size: 21px;
+
+}
+
+.StyleResult {
+	margin-top: 30px;
+	font-size: 20px;
+	color: darkred;
+}
+
+.StyleList {
+	font-size: 18px;
+}
