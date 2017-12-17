@@ -1,0 +1,108 @@
+body{
+	margin:0px;
+}
+.classbox {
+	margin-bottom: 10px;
+	margin-left: auto;
+  margin-right: auto;
+}
+
+.classtd {
+	border: 1px solid lightgrey;
+}
+table {
+	border-spacing: 0px;
+} 
+
+button {
+	text-decoration: none;
+	padding: 15px 34px;
+	border: 2px solid grey;
+	border-radius: 8px;
+	color: #DC143C;
+	font-weight: bold;
+	margin-left:-6px; 
+	margin-bottom: 10px;
+	font-size: 16px;
+	background-color: rgba(255,255,255,0.5);
+}
+button:hover{
+	color:#C71585;
+
+}
+
+input {
+	border:none;
+	display: block;
+	width: 245px;
+	height: 30px;
+	color: blue;
+	text-align: center;
+	margin-bottom: 10px;
+	font-size: 16px;
+	background-color: rgba(255,255,255,0.5);
+	
+}
+
+.styledivcolor{
+	border: 1px solid black; 
+	height: 67px; 
+	width: 368px; 
+	padding: 6px;
+	background-color: rgba(255,255,255,0.5);
+	border-radius: 10px;
+	margin-bottom: 10px;
+	display: inline-block;
+	margin: 60px;
+}
+
+
+.divcolorleft {
+	display: inline-block; 
+	border: 1px solid black; 
+	height: 30px; 
+	width: 30px; 
+	margin-right: 20px;
+	border-radius: 10px;
+}
+
+.divcolorright {
+	display: inline-block;
+}
+
+.col {
+	display: inline-block;
+	border: 1px solid white;
+	height: 30px;
+	width: 30px;
+	border-radius: 10px;
+	margin-right: 3px;
+}
+#firstdiv {
+	background-image: url('https://i.ytimg.com/vi/MgJmR02ti4c/maxresdefault.jpg');
+	background-size: cover;
+	margin-bottom: 10px;
+}
+
+#divforinput{
+	display: inline-block;
+	margin-left: 175px;
+	margin-top: 15px;
+}
+
+#styledivSaveLoad{
+	height: 100%;
+	display: inline-block;
+	padding: 10px;
+	overflow: auto;
+}
+
+.buttonSaveLoadStyle {
+	margin-left: 10px;
+	color: #3CB371;
+}
+
+.buttonSaveLoadStyle:hover{
+	color:#FFD700;
+	text-shadow: 1px 1px grey;
+}

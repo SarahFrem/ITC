@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Paint 95</title>
+
+	<link rel="stylesheet" type="text/css" href="stylePaint.css">
+</head>
+<body>
+
+	<script>
+
+		var backcolor;
+
+		//first div in the top
+		var firstdiv = document.createElement('div');
+		document.body.appendChild(firstdiv);
+		firstdiv.setAttribute("id", "firstdiv");
+
+		//div for input
+		var divforinput = document.createElement('div');
+		firstdiv.appendChild(divforinput);
+		divforinput.setAttribute("id","divforinput");
+		
+
+		// create the input of canvas paramaters
+
+		var input = document.createElement('input');
+		divforinput.appendChild(input);
+		input.setAttribute("type", "text");
+		input.setAttribute("placeholder", "Height of the canvas");
+		input.setAttribute("id", "UserHeight")
+
+		var input2 = document.createElement('input');
+		divforinput.appendChild(input2);
+		input2.setAttribute("type", "text");
+		input2.setAttribute("placeholder", "Width of the canvas");
+		input2.setAttribute("id", "UserWidth");
+
+		var input3 = document.createElement('input');
+		divforinput.appendChild(input3);
+		input3.setAttribute("type", "number");
+		input3.setAttribute("placeholder", "number of rows");
+		input3.setAttribute("id", "UserRows");
+
+		var input4 = document.createElement('input');
+		divforinput.appendChild(input4);
+		input4.setAttribute("type", "number");
+		input4.setAttribute("placeholder", "number of colums");
+		input4.setAttribute("id", "UserCells");
+
+		// button to create the canvas
+
+		var btn = document.createElement("BUTTON");        
+		var textin = document.createTextNode("CREATE YOUR CANVAS");
+		btn.appendChild(textin);   
+		divforinput.appendChild(btn);
+		btn.addEventListener('click', drawTable);
+
+
+
+
+		//create the color palette : -> inside the first div
+		var divcolor = document.createElement('div');
+		divcolor.setAttribute("class", "styledivcolor");
+		firstdiv.appendChild(divcolor);
+
+			//2 div inside divcolor
+			//left one:
+		var divcolorpicked = document.createElement('div');
+		divcolor.appendChild(divcolorpicked);
+		divcolorpicked.setAttribute("class","divcolorleft");
+		divcolorpicked.style.backgroundColor="white";
+		//divcolorpicked.setAttribute("id","divcolorpicked");
+
+
+			//right one
+		var divcolorchoose = document.createElement('div');
+		divcolor.appendChild(divcolorchoose);
+		divcolorchoose.setAttribute("class", "divcolorright");
+
+			//inside the right one 
+		//first line div
+		var divcolorchooseUP = document.createElement('div');
+		divcolorchoose.appendChild(divcolorchooseUP);
+
+		//second line div
+		var divcolorchooseBOT = document.createElement('div');
+		divcolorchoose.appendChild(divcolorchooseBOT);
+
+		// in the first line 
+
+		//array of color 
+		myArraycolor = ["blue", "yellow","purple","red","orange", "green", "lightgreen", "lightblue","white", "black", "pink", "grey", "LightSeaGreen ", "tomato", "Violet", "khaki", "maroon", "navy"];
+		for (var i = 1; i < 19; i++) {
+
+			var mycolor = document.createElement('div');
+			mycolor.setAttribute("class", "col");
+			mycolor.style.backgroundColor=myArraycolor[i-1];
+			mycolor.addEventListener('click', pickcolor);
+
+
+			if (i<10) {
+				divcolorchooseUP.appendChild(mycolor);
+			}
+			else { //in the second line
+				divcolorchooseBOT.appendChild(mycolor);
+			}
+		}
+
+
+		//button save & load in a div
+
+		var divSaveLoad = document.createElement('div');
+		firstdiv.appendChild(divSaveLoad);
+		divSaveLoad.setAttribute("id", "styledivSaveLoad");
+
+		var savebutton = document.createElement("BUTTON");
+		var textsave = document.createTextNode("SAVE");
+		savebutton.appendChild(textsave);
+		divSaveLoad.appendChild(savebutton);
+		savebutton.setAttribute("class", "buttonSaveLoadStyle");
+		savebutton.addEventListener('click', save);
+
+		var loadbutton = document.createElement("BUTTON");
+		var textload = document.createTextNode("LOAD");
+		loadbutton.appendChild(textload);
+		divSaveLoad.appendChild(loadbutton); 
+		loadbutton.setAttribute("class", "buttonSaveLoadStyle");
+		loadbutton.addEventListener('click', load);
+
+
+
+
+		// function drawTable:
+
+		var candraw=false;
+ 			
+
+    		function drawTable() {
+
+    			if(document.getElementById('div1')!=null) { //remove the existing table if we want to change
+    				var olddiv = document.getElementById('div1');
+    				olddiv.parentNode.removeChild(olddiv);
+
+    			}
+
+    			var box = document.createElement('div');
+				document.body.appendChild(box);
+		
+				box.setAttribute("class", "classbox");
+				box.setAttribute("id", "div1");
+
+				var height=document.getElementById("UserHeight").value ;
+				var width=document.getElementById("UserWidth").value;
+		
+				box.style.width = parseInt(width) + "px";
+				box.style.height = parseInt(height) + "px";
+
+
+				var totalRows = document.getElementById("UserRows").value;
+				var cellsInRow = document.getElementById("UserCells").value;
+
+				//in case user decide to have only 1 square or wrong number -> ie negative
+
+				if ((isNaN(totalRows))||(totalRows==0)||(totalRows<0)) {
+					totalRows=1;
+				}
+
+				if ((isNaN(cellsInRow))||(cellsInRow==0)||(cellsInRow<0)) {
+					cellsInRow=1;
+				}
+
+				var heightcell = (parseInt(height)-(4*totalRows))/totalRows;
+				var widthcell = parseInt(width)/cellsInRow;
+
+        		var div1 = document.getElementById('div1');
+ 				var tbl = document.createElement("table");
+ 
+       			for (var r = 0; r < totalRows; r++) {
+            		var row = document.createElement("tr");
+	     
+            		for (var c = 0; c < cellsInRow; c++) {
+                		var cell = document.createElement("td");
+                		cell.setAttribute("class", "classtd");
+                		cell.style.width = widthcell + "px";
+						cell.style.height = heightcell + "px";
+						cell.style.backgroundColor="white";
+                		row.appendChild(cell);         
+            
+					tbl.appendChild(row); 
+        		}
+    
+     			div1.appendChild(tbl); 
+ 
+     		}
+
+     		box.addEventListener('mousemove', function(e) {
+               	changecolor(e);
+                
+            });
+
+     		box.addEventListener('mousedown', function(e){
+                 	candraw=true;
+                	changecolor(e); 
+            });
+
+            box.addEventListener('mouseup', function(e) {
+            	candraw=false;
+            }); 
+
+            }
+
+
+
+			//function pick the color:
+
+			function pickcolor(e) {
+				var x = e.srcElement;
+				backcolor = x.style.backgroundColor;
+				divcolorpicked.style.backgroundColor=backcolor;
+			}
+
+			function changecolor(e) {
+				if (candraw) {
+				var y = e.srcElement;
+				y.style.backgroundColor=backcolor;
+			}
+
+			}
+
+
+
+
+
+			function save() {
+				var savedraw = document.getElementById('div1').innerHTML;
+				localStorage.setItem('lastdraw', savedraw);
+			}
+
+			function load() {
+    			var loadObj = localStorage.getItem('lastdraw');
+    			document.getElementById('div1').innerHTML = loadObj;
+			}
+
+		
+		
+	</script>
+
+
+</body>
+</html>
