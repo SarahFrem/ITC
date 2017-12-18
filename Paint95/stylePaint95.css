@@ -26,9 +26,24 @@ button {
 	font-size: 16px;
 	background-color: rgba(255,255,255,0.5);
 }
+
+#buttonclear{
+	display: block;
+    margin-left: 79px;
+    font-size: 15px;
+    border: none;
+    background-color: rgba(255,255,255,0);
+    padding: 0px;
+    color: blue;
+}
+
 button:hover{
 	color:#C71585;
 
+}
+
+#buttonclear:hover{
+	color:#C71585;
 }
 
 input {

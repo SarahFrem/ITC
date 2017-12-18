@@ -56,6 +56,15 @@
 		divforinput.appendChild(btn);
 		btn.addEventListener('click', drawTable);
 
+		//button clear
+
+		var btnclear = document.createElement("BUTTON");        
+		var textclear = document.createTextNode("CLEAR ME");
+		btnclear.appendChild(textclear);   
+		divforinput.appendChild(btnclear);
+		btnclear.setAttribute("id","buttonclear");
+		btnclear.addEventListener('click', clear);
+
 
 
 
@@ -228,17 +237,27 @@
 
 			}
 
+			//function clear
+
+			function clear() {
+				if(document.getElementById('div1')!=null) {
+				drawTable();
+				}
+			}
+
 
 
 
 
 			function save() {
 				var savedraw = document.getElementById('div1').innerHTML;
-				localStorage.setItem('lastdraw', savedraw);
+				var lastdraw = prompt('enter the name of the draw');
+				localStorage.setItem(lastdraw, savedraw);
 			}
 
 			function load() {
-    			var loadObj = localStorage.getItem('lastdraw');
+				var drawpicked = prompt('enter the name of the draw you want to load');
+    			var loadObj = localStorage.getItem(drawpicked);
     			document.getElementById('div1').innerHTML = loadObj;
 			}
 
