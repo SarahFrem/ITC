@@ -1,0 +1,228 @@
+
+
+#containerCards {
+	background-image: url('./images/bg.jpg');
+}
+
+
+.row{
+	margin: 0px 15px;
+}
+h1{
+	display: inline-block;
+    width: 68%;
+    text-align: center;
+}
+
+#ITClogo {
+	background-image: url(./images/logo.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    height: 40px;
+    width: 90px;
+    display: inline-block;
+    margin-top: 8px;
+}
+
+button {
+	text-decoration: none;
+	padding: 0px 14px;
+	border: 2px solid grey;
+	border-radius: 8px;
+	color: #0066cc;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-right: 5px;
+	background-color: rgba(0,0,0,0);
+}
+
+#buttonreset{
+	border: 2px solid grey;
+	color: tomato;
+	font-size: 19px;
+}
+#buttonreset:hover {
+	border:none;
+	font-size: 21px;
+	color: #DC143C;
+}
+
+#buttongo {
+
+	border: 2px solid grey;
+	color: #0066cc;
+	font-size: 19px;
+
+}
+
+#buttongo:hover {
+	color:#009999;
+	border:none;
+	font-size: 22px;
+
+}
+
+#thetime{
+	font-size: 20px;
+	color:#800000;
+	font-weight: bold;
+	margin-left: 22px;
+	display: inline-block;
+}
+
+#theguess{
+
+	font-size: 20px;
+	color:#800000;
+	font-weight: bold;
+	margin-right: 22px;
+    margin-top: 11px;
+    display: inline-block;
+}
+
+#secondrow{
+	margin: 0px;
+    margin-left: 15px;
+}
+
+#theme{
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+    font-family: 'Bookman Old Style', serif;
+}
+
+.col{
+	background-image: url('./images/back2.jpg');
+	background-size: cover;
+	border-radius: 10px;
+	height: 150px;
+	margin: 10px;
+	box-shadow: white;
+	transition-property: all;
+	transition-duration: 0.3s;
+    transition-timing-function: ease;
+}
+
+.rightext {
+	margin-right: 140px;
+}
+.leftext {
+	margin-left: 140px;
+}
+
+
+.col:hover{
+	box-shadow: 4px 7px rgba(31, 100, 147, 0.6);;
+	height: 135px;
+}
+
+/*responsivness*/
+
+@media screen and (max-width: 840px) {
+  .rightext {
+    margin-right: 0px;
+  }
+  .leftext{
+  	margin-left: 0px;
+  }
+}
+
+@media screen and (max-width: 600px) {
+ .col{
+ 	height: 65px;
+ }
+
+  .col:hover{
+	box-shadow: 4px 7px rgba(31, 100, 147, 0.6);;
+	height: 55px;
+}
+
+ h1{
+ 	font-size: 18px;
+ 	display: block;
+ 	width: 100%;
+ 	margin:10px;
+ }
+
+#theguess{
+	display: block;
+	width: 100%;
+	text-align: center;
+	margin:0px;
+	font-size: 17px;
+}
+
+ #theme {
+ 	font-size: 14px;
+ }
+
+ #buttonreset, #buttongo {
+ 	font-size: 14px;
+ }
+
+ #buttonreset:hover, #buttongo:hover {
+ 	font-size: 16px;
+ }
+
+ #secondrow {
+ 	display: inline-block;
+ }
+
+ #thetime {
+ 	display: inline-block;
+ 	font-size: 17px;
+ 	width: 100%;
+	text-align: center;
+	margin:0px;
+ }
+
+
+}
+
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 55%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+#mybutton {
+	border:none;
+
+}
+
+#mybutton:hover, #mybutton:focus{
+	color: black;
+}
+
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}

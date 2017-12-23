@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Memory Game</title>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+
+   <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="memorygame.css">
+
+
+</head>
+<body>
+	<div class="container-fluid ">
+		<div class="header">
+			<div id="ITClogo"></div>
+			<div id="thetime">0:0</div>
+			<h1>Welcome to my memory game</h1>
+			<div id="theguess">0</div>
+			<button id="buttongo">Start</button>
+			<button id="buttonreset">Reset</button>
+
+			<div id="secondrow">
+				<select id="theme">
+					<option selected>Your theme</option> 
+  					<option value="Animals">Animals</option> 
+  					<option value="Travel">Travel</option>
+  					<option value="Hollywood">Hollywood</option>
+  					<option value="Bakery">Bakery</option>
+				</select>
+			</div>
+		</div>
+
+
+	<div id="containerCards">
+		<div class="row">
+			<div class="col leftext" id="card0"></div>
+			<div class="col" id="card1"></div>
+			<div class="col" id="card2"></div>
+			<div class="col rightext" id="card3"></div>
+		</div>
+		<div class="row">
+			<div class="col leftext" id="card4"></div>
+			<div class="col" id="card5"></div>
+			<div class="col" id="card6"></div>
+			<div class="col rightext" id="card7"></div>
+		</div>
+		<div class="row">
+			<div class="col leftext" id="card8"></div>
+			<div class="col" id="card9"></div>
+			<div class="col" id="card10"></div>
+			<div class="col rightext" id="card11"></div>
+		</div>
+	</div>
+</div>
+
+
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+  <div class="modal-content">
+  	<span class="close">&times;</span>
+    <p id="textinit"></p>
+    <button id="mybutton">New game</button>
+  </div>
+
+</div>
+
+
+	<script src="Memorygame1.js"></script>
+</body>
+</html>
