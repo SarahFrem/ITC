@@ -204,6 +204,10 @@ button {
     width: 55%; /* Could be more or less, depending on screen size */
 }
 
+#textinit{
+	text-align: center;
+}
+
 /* The Close Button */
 .close {
     color: #aaa;

@@ -72,7 +72,11 @@ function go(){
 	choose();
 	var newarray = randomize(myArrayofpictures);
 	cardobject = attribute(newarray);
-	alert("Now you can play!!");
+	setTimeout(function(){
+			document.getElementById('myModal').style.display="block"; //display the modal without the button new game
+			document.getElementById('mybutton').style.display="none";
+			document.getElementById('textinit').innerHTML = "Now you can play !";
+		},800);
 }
 
 function resetgame(myArrayofpictures){
@@ -146,6 +150,7 @@ function checkwin (){
 		clearTimeout(mytime);
 		setTimeout(function(){
 			document.getElementById('myModal').style.display="block";
+			document.getElementById('mybutton').style.display="block";
 			document.getElementById('textinit').innerHTML = 'Congratulations !!!! It took you '+ document.getElementById('thetime').textContent+ ' minutes with '+numberofwrong+' wrong guess to figure it out.'
 		},3000);
 
