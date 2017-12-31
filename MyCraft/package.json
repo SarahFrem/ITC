@@ -1,0 +1,24 @@
+{
+  "name": "mycraft",
+  "version": "1.0.0",
+  "description": "2d Minecraft building game",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MickaelAlliel/MyCraft.git"
+  },
+  "author": "Mickael Alliel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MickaelAlliel/MyCraft/issues"
+  },
+  "homepage": "https://github.com/MickaelAlliel/MyCraft#readme",
+  "dependencies": {
+    "express": "^4.16.2",
+    "morgan": "^1.9.0"
+  }
+}

@@ -1,0 +1,67 @@
+#grid, #toolbar {
+	border: 1px solid black;
+}
+
+#toolbar {
+	display: inline-flex;
+	padding: 20px;
+}
+
+.tileImage, .toolImage, .tileImage img, .toolImage img  {
+	width: 64px;
+	height: 64px;
+
+}
+
+.tileImage, .toolImage {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+#tools {
+	margin-right: 10px;
+}
+
+.selected {
+	box-shadow: 0px 0px 5px 5px black;
+}
+
+#grid {
+	display: flex;
+	flex-wrap: wrap;
+
+	width: 802px;
+	height: 602px;
+
+	background-color: skyblue;
+}
+
+.gridTile {
+	width: 40px;
+	height: 40px;
+
+	background-size: contain;
+}
+
+.row-margin {
+	margin-top: 2%;
+}
+
+.center-grid {
+	display: flex;
+	justify-content: center;
+}
+
+.inventoryText {
+	font-size: 1.5em;
+	color: white;
+	font-weight: 900;
+
+	position: relative;
+	bottom: 35px;
+	left: 35px;
+}
+
+.inventoryTextBird {
+	color: crimson;
+}

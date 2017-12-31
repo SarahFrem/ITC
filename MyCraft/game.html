@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+		<meta name="viewport" content="width=device-width,initial-scale=1">
+
+		<title>MyCraft - Mickael &amp; Sarah</title>
+		<meta name="author" content="Mickael Alliel & Sarah Fremond">
+		<meta name="description" content="2D Minecraft">
+
+		<link rel="shortcut icon" href="/images/favicon.png">
+
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js" integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh" crossorigin="anonymous"></script>
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+
+		<script src="js/globals.js"></script>
+		<script src="js/Tile.js"></script>
+		<script src="js/game.js"></script>
+
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+		<link rel="stylesheet" href="css/game.css" type="text/css">
+	</head>
+	<body>
+
+		<div class="container-fluid">
+			<div class="row row-margin">
+				<div class="col-9 center-grid">
+					<div id="grid">
+					</div>
+				</div>
+				<div class="col-3">
+					<div id="toolbar">
+						<div id="tools">
+							<div id="pickaxe" class="toolImage">
+								<img src="images/pickaxe.png">
+							</div>
+							<div id="axe" class="toolImage">
+								<img src="images/axe.png">
+							</div>
+							<div id="shovel" class="toolImage">
+								<img src="images/shovel.png">
+							</div>
+							<div id="slingshot" class="toolImage">
+								<img src="images/slingshot.png">
+							</div>
+						</div>
+						<div id="inventory">
+							<div id="dirt" class="tileImage">
+								<img src="images/dirt.png">
+								<span id="dirtInventory" class="inventoryText"></span>
+							</div>
+							<div id="grass" class="tileImage">
+								<img src="images/grass.png">
+								<span id="grassInventory" class="inventoryText"></span>
+							</div>
+							<div id="leaf" class="tileImage">
+								<img src="images/leaf.jpg">
+								<span id="leafInventory" class="inventoryText"></span>
+							</div>
+							<div id="rock" class="tileImage">
+								<img src="images/rock.png">
+								<span id="rockInventory" class="inventoryText"></span>
+							</div>
+							<div id="tree" class="tileImage">
+								<img src="images/tree.png">
+								<span id="treeInventory" class="inventoryText"></span>
+							</div>
+							<div id="bird" class="tileImage">
+								<img src="images/bird.png">
+								<span id="birdInventory" class="inventoryText inventoryTextBird"></span>
+							</div>
+						</div>
+						
+						<!--<div id="saveLoad">
+							<button id="save" class="btn btn-secondary">Save</button>
+							<button id="load" class="btn btn-secondary">Load</button>
+						</div>-->
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</body>
+</html>
