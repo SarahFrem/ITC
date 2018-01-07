@@ -3,6 +3,7 @@ Monopoly.allowRoll = true;
 Monopoly.moneyAtStart = 30;
 Monopoly.doubleCounter = 0;
 Monopoly.result=[];
+Monopoly.playersBroke = [];
 
 
 Monopoly.init = function(){
@@ -61,7 +62,9 @@ Monopoly.updatePlayersMoney = function(player,amount){ //function to update the 
 };
 
 Monopoly.removePlayer = function(player){ //function to remove the player who lost
+	//var broke = true;
     var idPlayer = player.attr("id");
+    Monopoly.playersBroke.push() =  idPlayer;
 
     var listProperties = $("[data-owner=idPlayer]");
 
@@ -140,6 +143,11 @@ Monopoly.setNextPlayerTurn = function(){ //define which is the current player
     }
     else{
         nextPlayerId = playerId + 1;
+    }
+    for (var i = 0; i < playersBroke.length; i++) {
+    	if (nextPlayerId==playersBroke[i]) {
+    		nextPlayerId = playerId + 1;
+    	}
     }
     if (nextPlayerId > $(".player").length){
         nextPlayerId = 1;
